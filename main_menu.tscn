@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dcff70nvl8x6j"]
+
+[ext_resource type="Script" uid="uid://cggs65myw4r0o" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://cbfe8pmxq07lx" path="res://ui/menu.jpeg" id="2_7vrkn"]
+
+[node name="MainMenu" type="Control" unique_id=961658431]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="Background" type="TextureRect" parent="." unique_id=894141339]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7vrkn")
+expand_mode = 1
+
+[node name="TwoPlayersButton" type="Button" parent="." unique_id=2095576853]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 370.0
+offset_right = 462.0
+offset_bottom = 424.0
+theme_override_font_sizes/font_size = 32
+text = "2 Players"
+
+[node name="PlayWithAIButton" type="Button" parent="." unique_id=2079087402]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 440.0
+offset_right = 462.0
+offset_bottom = 494.0
+theme_override_font_sizes/font_size = 32
+text = "Play with AI"

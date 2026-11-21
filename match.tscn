@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dlrqvshdowq8y"]
+
+[ext_resource type="Texture2D" uid="uid://dj730sdvqd0rv" path="res://court/floor.png" id="1_crtjb"]
+[ext_resource type="Script" uid="uid://bavf7vbq7p20n" path="res://match.gd" id="1_nm5tq"]
+[ext_resource type="Texture2D" uid="uid://c21kfaeq2rv3q" path="res://court/net.png" id="3_2n26j"]
+[ext_resource type="Texture2D" uid="uid://v7bsqer3hncr" path="res://court/table.jpeg" id="3_8pbkx"]
+[ext_resource type="Texture2D" uid="uid://cf2nui86coneu" path="res://sprites/racket_red.png" id="4_2n26j"]
+[ext_resource type="Texture2D" uid="uid://h6iwiot7xrlw" path="res://sprites/racket_navy.png" id="5_nm5tq"]
+[ext_resource type="Texture2D" uid="uid://cotrta8nxepfr" path="res://sprites/ball.png" id="7_8pbkx"]
+[ext_resource type="AudioStream" uid="uid://cmay8aloo8axy" path="res://audio/hit.wav" id="8_tf04k"]
+[ext_resource type="AudioStream" uid="uid://ckkeq1j5bt56r" path="res://audio/point.wav" id="9_2djil"]
+[ext_resource type="AudioStream" uid="uid://g1uyjxd5ui2j" path="res://audio/win.wav" id="10_g5f17"]
+[ext_resource type="Script" uid="uid://ck42nyqts75cy" path="res://match_point_effects.gd" id="11_nb2p7"]
+[ext_resource type="Script" uid="uid://bi3dx1qe58xsu" path="res://table_impact_effects.gd" id="12_xqdtl"]
+[ext_resource type="Script" uid="uid://jw7ubey7f7s0" path="res://node_match_countdown.gd" id="13_eoldx"]
+
+[node name="Match" type="Node2D" unique_id=524048263]
+script = ExtResource("1_nm5tq")
+
+[node name="Floor" type="Sprite2D" parent="." unique_id=1885369233]
+texture = ExtResource("1_crtjb")
+centered = false
+
+[node name="Table" type="Sprite2D" parent="." unique_id=114766423]
+position = Vector2(96, 96)
+texture = ExtResource("3_8pbkx")
+centered = false
+
+[node name="Net" type="Sprite2D" parent="." unique_id=1538376122]
+position = Vector2(622, 96)
+texture = ExtResource("3_2n26j")
+centered = false
+
+[node name="RacketLeft" type="Sprite2D" parent="." unique_id=1184085207]
+position = Vector2(212, 360)
+texture = ExtResource("4_2n26j")
+
+[node name="RacketRight" type="Sprite2D" parent="." unique_id=819107941]
+position = Vector2(1068, 360)
+texture = ExtResource("5_nm5tq")
+
+[node name="Ball" type="Sprite2D" parent="." unique_id=495264089]
+position = Vector2(640, 280)
+texture = ExtResource("7_8pbkx")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=378708241]
+stream = ExtResource("8_tf04k")
+
+[node name="PointSound" type="AudioStreamPlayer2D" parent="." unique_id=1534816046]
+stream = ExtResource("9_2djil")
+
+[node name="WinSound" type="AudioStreamPlayer2D" parent="." unique_id=429086176]
+stream = ExtResource("10_g5f17")
+
+[node name="MatchPointEffects" type="Node" parent="." unique_id=800207919]
+script = ExtResource("11_nb2p7")
+
+[node name="TableImpactEffects" type="Node2D" parent="." unique_id=430692060]
+script = ExtResource("12_xqdtl")
+
+[node name="NodeMatchCountdown" type="Node" parent="." unique_id=673891818]
+script = ExtResource("13_eoldx")
